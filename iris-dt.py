@@ -9,6 +9,11 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 
+mlflow.set_tracking_uri("https://dagshub.com/vandanrana/mlops-session-16-dagshub-demo.mlflow")
+
+import dagshub
+dagshub.init(repo_owner='vandanrana', repo_name='mlops-session-16-dagshub-demo', mlflow=True)
+
 
 iris = load_iris()
 X = iris.data
